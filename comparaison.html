@@ -10,15 +10,28 @@
         //Saisir 2 nombres 
         //Afficher lequel est le plus grand
 
+        //let nb1=Number(prompt('Entrez le premier nombre'));
+        //let nb2=Number(prompt('Entrez le deuxieme nombre'));
+
+        //if (nb1>nb2) 
+            //console.log(nb1,'est plus grand');
+       // else if (nb1<nb2)
+            //console.log(nb2,'est le plus grand');
+        //else if(nb1==nb2)
+            //console.log('Les deux nombres sont égaux');
+        
+        //Créer une fonction max qui prend deux paramètres et qui renvoie le plus grand des deux 
+
+        function max(a,b){
+            if (a>b) 
+                return a;
+            else if (a<b)
+                return b;
+            }
+
         let nb1=Number(prompt('Entrez le premier nombre'));
         let nb2=Number(prompt('Entrez le deuxieme nombre'));
-
-        if (nb1>nb2) 
-            console.log(nb1,'est plus grand');
-        else if (nb1<nb2)
-            console.log(nb2,'est le plus grand');
-        else if(nb1==nb2)
-            console.log('Les deux nombres sont égaux');
+        max(nb1,nb2);
         
     </script>
     
