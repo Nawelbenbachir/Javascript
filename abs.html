@@ -7,19 +7,15 @@
 </head>
 <body>
     <script>
+
+        //Déclarer une fonction abs qui prend un paramètre nb et retourne sa valeur absolue
         function abs(nb){
-            if (nb<0)
-                return -nb;
-            else 
-                return nb;
-            
+            if (nb<0) nb=-nb;
+            return nb;
         }
-        let r=abs(-5);
-        console.log(r);
-        r=abs(0);
-        console.log(r);
-        r=abs(5);
-        console.log(r);
+        console.log(abs(-5));
+        console.log(abs(0));
+        console.log(abs(5));
     </script>
     
 </body>
