@@ -7,10 +7,7 @@ let livre={
         console.log(this.auteur, this.nb_page);
     },
     estLong:function(){
-        if(this.nb_page>300) 
-            return true;
-        else
-            return false;
+            return this.nb_page>300;
         
     },
     emprunter: function(){
