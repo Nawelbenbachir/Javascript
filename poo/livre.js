@@ -3,7 +3,6 @@ let livre={
     auteur:'Camus',
     nb_page:600,
     emprunte:true,
-    rendu:false,
     afficher:function(){
         console.log(this.auteur, this.nb_page);
     },
@@ -23,8 +22,8 @@ let livre={
             return "Le livre n'a pas été emprunté";
         }
     },
-    rendu: function(){
-        if (this.emprunte==false && this.rendu==true)
+    rendre: function(){
+        if (this.emprunte==false)
             return"Le livre a été rendu";
         else
             return"Le livre n'a pas été rendu";
@@ -33,4 +32,4 @@ let livre={
 
 console.log(livre.emprunter());
 console.log(livre.estLong());
-console.log(livre.rendu());
+console.log(livre.rendre());
