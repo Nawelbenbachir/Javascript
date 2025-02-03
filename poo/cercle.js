@@ -5,11 +5,11 @@ class Cercle {
     }
     //Methodes:perimetre(),aire()
     aire(){
-        return "Le périmètre du cerlce est: ",Math.PI*this.rayon**2;
+        return Math.PI*this.rayon**2;
     };
 
     perimetre(){
-        return "L'aire du cercle est: ", this.rayon*2*Math.PI;
+        return this.rayon*2*Math.PI;
     }
 }
 
