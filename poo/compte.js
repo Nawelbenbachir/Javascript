@@ -5,15 +5,15 @@ let compte={
     client:'Dupont',
     numero_compte: '4587236545',
     solde: 789,
-    afficher : function(){
+    afficher : function(){ //: function() n'est plus obligatoire
         console.log(this.client,this.numero_compte,this.solde);
     },
     crediter :function(montant){
-        this.solde=this.solde+montant;
+        this.solde+=montant;
         return this.solde;
     },
     debiter: function(montant){
-        this.solde=this.solde-montant;
+        this.solde-=montant;
         return this.solde;
     },
 }

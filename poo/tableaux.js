@@ -55,16 +55,17 @@
 
 function tri(tableau){
     let k=0;
-    for(let i=0;i<=tableau.lenght;i++){
-        for (let j=1; j<tableau.lenght;j++){
-
-        k=tableau[j];
-        tableau[j]=tableau[i];
-        tableau[i]=k;
+    for(let i=0;i<=tableau.lenght-1;i++){
+        for (let j=1; j<=tableau.lenght;j++){
+            if(tableau[j]>tableau[i]){
+                k=tableau[j];
+                tableau[j]=tableau[i];
+                tableau[i]=k;
+            }
+        
         }
     }
-
     return tableau;
-}
+};
 tableau=[5,84,15,65,25,74];
-tri(tableau);
+console.log(tri(tableau));
