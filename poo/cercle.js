@@ -14,9 +14,9 @@ class Cercle {
 }
 
 let c1=new Cercle(5);
-console.log(c1.perimetre());
-console.log(c1.aire());
+console.log("Le périmètre de c1 est ",c1.perimetre());
+console.log("L'aire de c1 est ",c1.aire());
 
 let c2=new Cercle(10);
-console.log(c2.perimetre());
-console.log(c2.aire());
+console.log("Le périmètre de c2 est ",c2.perimetre());
+console.log("L'aire de c2 est ",c2.aire());
