@@ -39,4 +39,4 @@ c9= new Contact("Lefevre","Claire","05/01/1978","F","78 Boulevard HAusseman","75
 c10= new Contact("Martin","Sophie","12/03/1985","F"," 45rue des Lilas","75012","PAris","0623456798","martin@email.com");
 
 const table=[c1,c2,c3,c4,c5,c6,c7,c8,c9,c10];
-table.forEach(function(contact){contact.afficher()});
+table.forEach(contact=>contact.afficher());
