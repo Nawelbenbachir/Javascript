@@ -2,34 +2,35 @@
 let livre={
     auteur:'Camus',
     nb_page:600,
-    emprunte:true,
+    disponible:false,
     afficher:function(){
         console.log(this.auteur, this.nb_page);
     },
     estLong:function(){
         if(this.nb_page>300) 
-            return "Le livre fait plus de 300 pages";
+            return true;
         else
-            return "Le livre fait moins de 300 pages"
+            return false;
         
     },
     emprunter: function(){
-        if (this.emprunte==true){
+        if (this.disponible==false){ 
+            this.disponible=true;
             return "Le livre a été emprunté";
-            this.emprunte=false;
+           
         }
         else{
             return "Le livre n'a pas été emprunté";
         }
     },
     rendre: function(){
-        if (this.emprunte==false)
+        if (this.disponible==true)
             return"Le livre a été rendu";
         else
             return"Le livre n'a pas été rendu";
     }
 };
 
-console.log(livre.emprunter());
 console.log(livre.estLong());
+console.log(livre.emprunter());
 console.log(livre.rendre());
