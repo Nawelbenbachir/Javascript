@@ -22,7 +22,29 @@ class Contact{
         console.log(this.nom,this.prenom,this.date_naiss,this.sexe,this.adresse,this.code_postal,this.ville,this.telephone,this.email);
     }
     mail(){
-        console.log("Le mail a été envoyé à ",this.email);
+        var nodemailer = require('nodemailer');
+        const smtp = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+              user: 'benbachirnawel@gmail.com',
+              pass: 'yourpassword'
+            }
+          });
+        
+          const mailOptions = {
+            from: 'benbachirnawel@gmail.com',
+            to: 'benbachirnawel@mail.com',
+            subject: 'Sending Email using Node.js',
+            text: 'That was easy!'
+          };
+          
+          smtp.sendMail(mailOptions, function(error, info){
+            if (error) {
+              console.log(error);
+            } else {
+              console.log('Email sent: ' + info.response);
+            }
+          });
     }
     
 }
@@ -38,6 +60,6 @@ c8= new Contact("Lambert","Nicolas","20/06/1988","H"," 5 Place de la Gare","6700
 c9= new Contact("Lefevre","Claire","05/01/1978","F","78 Boulevard HAusseman","75008","PAris","0654782310","lefevret@email.com");
 c10= new Contact("Martin","Sophie","12/03/1985","F"," 45rue des Lilas","75012","PAris","0623456798","martin@email.com");
 
-c5.mail();
-const table=[c1,c2,c3,c4,c5,c6,c7,c8,c9,c10];
-table.forEach(contact=>contact.afficher());
+c1.mail();
+// const table=[c1,c2,c3,c4,c5,c6,c7,c8,c9,c10];
+// table.forEach(contact=>contact.afficher());
