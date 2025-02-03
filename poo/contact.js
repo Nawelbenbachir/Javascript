@@ -1,6 +1,6 @@
 /*Créer une classe Contact :
 - Propriétés/attributs --> nom,prenom,date de naissance,sexe,adresse,code postal,ville,telephone,email
-- Méthodes --> toString() qui affiche les infos du contact, mail qui envoie un mail au contact(affiche un msg ds la console "email envoyé")
+- Méthodes --> afficher() qui affiche les infos du contact, mail qui envoie un mail au contact(affiche un msg ds la console "email envoyé")
 Créer une collection(tableau) de 10 contacts basé sur la classe Contact
 Afficher un listing des contacts
 */
@@ -21,8 +21,8 @@ class Contact{
     afficher(){
         console.log(this.nom,this.prenom,this.date_naiss,this.sexe,this.adresse,this.code_postal,this.ville,this.telephone,this.email);
     }
-    mail(email){
-        console.log("Le mail a été envoyé à ",email);
+    mail(){
+        console.log("Le mail a été envoyé à ",this.email);
     }
     
 }
@@ -38,5 +38,6 @@ c8= new Contact("Lambert","Nicolas","20/06/1988","H"," 5 Place de la Gare","6700
 c9= new Contact("Lefevre","Claire","05/01/1978","F","78 Boulevard HAusseman","75008","PAris","0654782310","lefevret@email.com");
 c10= new Contact("Martin","Sophie","12/03/1985","F"," 45rue des Lilas","75012","PAris","0623456798","martin@email.com");
 
+c5.mail();
 const table=[c1,c2,c3,c4,c5,c6,c7,c8,c9,c10];
 table.forEach(contact=>contact.afficher());
