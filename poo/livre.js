@@ -14,7 +14,7 @@ let livre={
         
     },
     emprunter: function(){
-        if (this.disponible==false){ 
+        if (!this.disponible){ 
             this.disponible=true;
             return "Le livre a été emprunté";
            
@@ -24,7 +24,7 @@ let livre={
         }
     },
     rendre: function(){
-        if (this.disponible==true)
+        if (this.disponible)
             return"Le livre a été rendu";
         else
             return"Le livre n'a pas été rendu";
