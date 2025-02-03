@@ -8,9 +8,11 @@ let livre={
         console.log(this.auteur, this.nb_page);
     },
     estLong:function(){
-        if(this.nb_page>300) {
+        if(this.nb_page>300) 
             return "Le livre fait plus de 300 pages";
-        }
+        else
+            return "Le livre fait moins de 300 pages"
+        
     },
     emprunter: function(){
         if (this.emprunte==true)
