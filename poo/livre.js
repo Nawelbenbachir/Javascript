@@ -15,13 +15,16 @@ let livre={
         
     },
     emprunter: function(){
-        if (this.emprunte==true)
+        if (this.emprunte==true){
             return "Le livre a été emprunté";
-        else
+            this.emprunte=false;
+        }
+        else{
             return "Le livre n'a pas été emprunté";
+        }
     },
     rendu: function(){
-        if (this.emprunte==true && this.rendu==true)
+        if (this.emprunte==false && this.rendu==true)
             return"Le livre a été rendu";
         else
             return"Le livre n'a pas été rendu";
