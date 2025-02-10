@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test javascript</title>
+    <!--# pour les id . pour les class (css)-->
+    <style>
+        .btn{
+            padding : 10px;
+            background-color :rgb(3, 55, 55);
+            color:white;
+            border:none;
+            cursor : pointer;
+
+        }
+        
+        .btn:hover {
+            background-color:blue;
+        }
+        .btn:active{
+            background-color:brown;
+        }
+
+        #texte{
+            margin-top:20px;
+            padding:10px;
+            background-color: rgb(216, 214, 214);
+            color: rgb(0,0,0);
+        }
+
+    </style>
+</head>
+<body>
+    <!--Méthode 1: attribut onclick-pour associer le js à l'évènement sur l'élément-->
+    <button id="btn1" class="btn" onclick="clic()">Cliquez ici</button>
+    <button id="btn2" class="btn">Cliquez ici</button>
+    <div id="texte"></div>
+    
+    <script>
+        //Méthode 2: sélectionner l'élément et ajouter un écouteur d'évènement
+        //let element=document.getElementById("btn1"); ancienne méthode
+        let element= document.querySelector("#btn2"); //depuis 2015 plus universelle où on peut sélectionner une classe . ou un id #
+
+        element.addEventListener("click",function(){
+            clic() //lie la fonction à l'élément 
+        });
+
+        //Version plus courte : document.querySelector("#btn2").addEventListener("click", ()=>clic());
+        function clic(){
+            //alert("clique sur le bouton");
+            let element= document.querySelector("#texte"); //element=texte
+            element.innerHTML +="Vous avez cliqué sur le bouton <br>"; //ajoute le texte html à chaque clique sur le bouton
+        } 
+        
+    </script>
+</body>
+</html>
+

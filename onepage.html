@@ -1,0 +1,55 @@
+<!--Créer une page html avec 3 boutons en haut Accueil,Produits,Contact et une div qui couvre le reste de la page.A chaque clique sur chacun des bouton, on change le contenu de la div pour afficher la page concernée-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice</title>
+
+    <style>
+        .btn{
+            padding:10px;
+            margin:20px;
+            background-color: rgb(1, 40, 1);
+            border:none;
+            color: white;
+        }
+        #texte{
+            background-color: rgb(201, 210, 217);
+        }
+    </style>
+</head>
+
+<body>
+    <button id="accueil" class="btn">Accueil</button>
+    <button id="produit" class="btn">Produits</button>
+    <button id="contact" class="btn">Contact</button>
+    <div id="texte"></div>
+
+    <script>
+        let accueil=document.querySelector("#accueil");
+        let produit=document.querySelector("#produit");
+        let contact=document.querySelector("#contact"); 
+        
+        function clic(){
+            let texte= document.querySelector("#texte");
+        }
+
+        accueil.addEventListener("click",function(){
+            clic()
+            texte.innerHTML="Bienvenue sur le site"
+        });
+
+        produit.addEventListener("click",function(){
+            clic()
+            texte.innerHTML="Voici nos produits"
+        });
+        contact.addEventListener("click",function(){
+            clic()
+            texte.innerHTML="Nom<br>Prenom<br>Adresse mail<br>Message<br>"
+        });
+       
+    </script>
+</body>
+</html>
