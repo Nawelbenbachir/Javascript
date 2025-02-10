@@ -10,7 +10,7 @@ class Contact {
         this.date_naissance=date_naissance
     }
     afficher(){
-        console.log(`nom:${this.nom},prenom: ${this.prenom},date de naissance:${this.date_naissance}`);
+        console.log(`nom:${this.nom} prenom: ${this.prenom}date de naissance:${this.date_naissance}`);
     }
 }
 
@@ -22,7 +22,7 @@ class Employee extends Contact {
     }
     afficher(){
         super.afficher();
-        console.log(`salaire:${this.salaire}, anciennete: ${this.anciennete}`);
+        console.log(`salaire: ${this.salaire} €  anciennete: ${this.anciennete}`);
     }
     augmenter(){
         if (this.anciennete>10) {
