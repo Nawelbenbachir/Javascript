@@ -2,11 +2,11 @@
 let cercle={
     rayon:5,
     diametre:10,
-    aire: function(){
+    aire(){
         return Math.PI*this.rayon**2;
     },
-    perimetre: function(){
-        return this.rayon*2*Math.PI
+    perimetre(){
+        return this.rayon*2*Math.PI;
     }
 }
 console.log("rayon",cercle.rayon);
