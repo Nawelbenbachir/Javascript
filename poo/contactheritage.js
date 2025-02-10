@@ -32,12 +32,7 @@ class Employee extends Contact {
 
 }
 
-let Benoit= new Employee ("Benoit")
-Benoit.nom="Dupont";
-Benoit.prenom="Benoit";
-Benoit.date_naissance="26/10/85";
-Benoit.salaire=1800;
-Benoit.anciennete=12;
+let Benoit= new Employee ("Benoit","Dupont","26/10/1995",1800,12);
 Benoit.afficher();
 Benoit.augmenter();
 Benoit.afficher();
