@@ -14,9 +14,11 @@
             background-color: rgb(1, 40, 1);
             border:none;
             color: white;
+            cursor:pointer;
         }
         #texte{
             background-color: rgb(201, 210, 217);
+            border: 1px;
         }
     </style>
 </head>
@@ -28,26 +30,17 @@
     <div id="texte"></div>
 
     <script>
-        let accueil=document.querySelector("#accueil");
-        let produit=document.querySelector("#produit");
-        let contact=document.querySelector("#contact"); 
+
+        document.querySelector("#accueil").addEventListener("click",function(){
+            document.querySelector("#texte").innerHTML="Bienvenue sur le site"
+        });
         
-        function clic(){
-            let texte= document.querySelector("#texte");
-        }
 
-        accueil.addEventListener("click",function(){
-            clic()
-            texte.innerHTML="Bienvenue sur le site"
+        document.querySelector("#produit").addEventListener("click",function(){
+            document.querySelector("#texte").innerHTML="Voici nos produits"
         });
-
-        produit.addEventListener("click",function(){
-            clic()
-            texte.innerHTML="Voici nos produits"
-        });
-        contact.addEventListener("click",function(){
-            clic()
-            texte.innerHTML="Nom<br>Prenom<br>Adresse mail<br>Message<br>"
+        document.querySelector("#contact").addEventListener("click",function(){
+            document.querySelector("#texte").innerHTML="Nom:<br>Prenom:<br>Adresse mail:<br>Message:<br>"
         });
        
     </script>
