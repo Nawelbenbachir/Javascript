@@ -16,7 +16,7 @@ class Contact {
 
 class Employee extends Contact {
     constructor(nom,prenom,date_naissance,salaire,anciennete){
-        super(nom,prenom,date_naissance,salaire);
+        super(nom,prenom,date_naissance);
         this.salaire=salaire;
         this.anciennete=anciennete;
     }
