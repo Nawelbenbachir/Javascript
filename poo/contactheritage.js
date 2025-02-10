@@ -26,13 +26,15 @@ class Employee extends Contact {
     }
     augmenter(){
         if (this.anciennete>10) {
-            this.salaire=this.salaire+this.salaire*0.10;
+            this.salaire+=this.salaire*0.10;
         }
+        else
+            this.salaire+=this.salaire*0.05
     }
 
 }
 
-let Benoit= new Employee ("Benoit","Dupont","26/10/1995",1800,12);
-Benoit.afficher();
-Benoit.augmenter();
-Benoit.afficher();
+let benoit= new Employee ("Benoit","Dupont","26/10/1995",1800,12);
+benoit.afficher();
+benoit.augmenter();
+benoit.afficher();
