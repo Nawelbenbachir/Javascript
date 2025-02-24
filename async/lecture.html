@@ -9,9 +9,10 @@
     <div id="div"></div>
 <script>
    
-    fetch('fichier.txt')
-    .then(x=>x.text())
-    .then(y=>document.querySelector("#div").innerHTML=y);
+    fetch('fichier.txt') //charge le fichier texte
+    .then(response=>response.text()) //convertit la réponse en texte brut
+    .then(texte=>document.querySelector("#div").innerHTML=texte) //insère le texte dans la div
+    .catch(error=> console.error(error)); //en cas d'erreur 
     
 </script>
 </body>
