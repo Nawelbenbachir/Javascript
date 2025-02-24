@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requête avec jQuery</title>
+    <!--Méthode 2 
+    Inconvénient: Nécessaire de charger une librairie au préalable 
+    CDN Content Delivery Network serveur plus rapide -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <button id="btnXHR">Cliquez ici pour faire un appel HTTP type jQuery</button>
+    <script>
+        //Même requete que la méthode 1 mais bcp plus concis
+        //Objet $ équivalent à jQuery
+        $("#btnXHR").click(function(){
+            $.get("texte.txt",function(resultat){
+                console.log(resultat);
+            });
+        });
+    </script>
+    
+</body>
+</html>

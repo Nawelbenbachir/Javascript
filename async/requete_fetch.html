@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Méthode 3: API-->
+    <title>Fetch API</title>
+</head>
+<body>
+    <button id="btnFetch">Cliquez ici pour faire un appel HTTP Fetch</button>
+    <div id="div"></div>
+    <script>
+        document.querySelector("#btnFetch").addEventListener("click",()=>loadFetch());
+        function loadFetch(){
+            fetch('texte.txt')
+            //fonction qui s'exécute quand le fetch est terminé
+            //elle transforme la réponse obtenue en texte
+            .then(response=> response.text())
+            //fonction qui affiche le texte dans la console
+            .then(texte=>document.querySelector("#div").innerHTML(texte))
+            //en cas d'erreur dans un des .then, affiche l'erreur dans la console
+            .catch(error=> console.error(error));
+        }
+    </script>
+</body>
+</html>

@@ -8,6 +8,7 @@
     <title>Exercice</title>
 
     <style>
+
         .btn{
             padding:10px;
             margin:20px;
@@ -16,10 +17,16 @@
             color: white;
             cursor:pointer;
         }
+
+        .btn:hover{
+            background-color: darkkhaki;
+        }
+
         #texte{
             background-color: rgb(201, 210, 217);
             border: 1px;
         }
+        
     </style>
 </head>
 
@@ -34,8 +41,6 @@
         document.querySelector("#accueil").addEventListener("click",function(){
             document.querySelector("#texte").innerHTML="Bienvenue sur le site"
         });
-        
-
         document.querySelector("#produit").addEventListener("click",function(){
             document.querySelector("#texte").innerHTML="Voici nos produits"
         });

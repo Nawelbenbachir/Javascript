@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonctions JS asynchrone</title>
+    <!--Requete sur un serveur directement avec JS
+    AJAX : Asynchronous Javascript Xml ( remplace par Json Javascript Object Notation)
+    Methode 1: XMLHTTPRequest objet de JS capable d'interroger un serveur (Vanilla Javascript)
+    Methode 2: JQuery encapsulé XMLHTTPRequest
+    Methode 3:  2015 ES6 : API Fetch 
+    Utile pour le MERN MySQL/Express/React/NodeJS-->
+
+
+</head>
+<body>
+    <button id="btnXHR">Cliquez ici pour faire un appel HTTP type XHR</button>
+
+    <script>
+        //Méthode 1 pour requête sur les serveurs sans utiliser de Javascript (ancienne méthode)
+        document.querySelector("#btnXHR").addEventListener("click",()=>loadXHR());
+        //on créer un objet 
+        function loadXHR(){
+            let xhr= new XMLHttpRequest();
+            xhr.open('GET', 'texte.txt',true);
+            //requete envoyé vers le fichier texte
+            xhr.onreadystatechange=function(){
+                console.log("ETat de la requete: "+ xhr.readyState);
+                if (xhr.readyState == 4 && xhr.status == 200){  //4 correspond à l'état où la requete est terminé 
+                    console.log(xhr.responseText);
+                }
+            }
+       
+        //pour démarrer le processus
+        xhr.send();
+
+        //pour montrer l'asynchronité du processus 
+        console.log("Requete envoyée");
+     }
+    </script>
+</body>
+</html>

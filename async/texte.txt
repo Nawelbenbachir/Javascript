@@ -1,0 +1,5 @@
+<h1> Fichier HTML récupéré de manière asynchrone </h1>
+<h2> Contenu du fichier </h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed varius mi. Sed id elementum velit. Suspendisse et dolor molestie,</p>
+<p> dapibus nisi et, ultricies sem. Donec pharetra tellus augue, dictum finibus justo cursus interdum. Vivamus mattis felis sed pellentesque </p>
+<p>pretium. Suspendisse semper leo at pharetra dapibus. Phasellus venenatis metus semper sapien facilisis, quis interdum felis tempus. Pellentesque vitae nisl felis.</p>
